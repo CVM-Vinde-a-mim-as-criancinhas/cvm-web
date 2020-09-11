@@ -22,7 +22,7 @@ CVM is structured independently of any church, party or government, maintaining 
 
 The website can be access on: https://www.cvm.org.br/
 
-Below, some pictures from the website today (26/08/2020):
+Below, some pictures from the website today (27/08/2020):
 
 ![alt text](https://i.imgur.com/iBbCTTk.png)
 ![alt text](https://i.imgur.com/wKl2bVh.png)
