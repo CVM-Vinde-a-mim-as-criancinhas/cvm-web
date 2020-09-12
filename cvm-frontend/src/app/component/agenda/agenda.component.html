@@ -1,0 +1,16 @@
+<div class="container" style="margin-top: 10px">
+  <form #formularioAgenda="ngForm" (submit)="addAgenda(agenda)">
+    <div class="form-group">
+      <label>Data Evento</label>
+      <input matInput type="date" class="form-control" name="data" [(ngModel)]="agenda.dataEvento" required>
+    </div>
+    <div class="form-group">
+      <label>Descricao Evento</label>
+      <input matInput type="text" class="form-control" name="descricao" [(ngModel)]="agenda.descricaoEvento" required>
+    </div>
+    <button type="submit" [disabled]="formularioAgenda.invalid" class="btn btn-primary">Cadastrar Evento
+    </button>
+  </form>
+</div>
+
+<pre>{{agenda | json}}</pre>

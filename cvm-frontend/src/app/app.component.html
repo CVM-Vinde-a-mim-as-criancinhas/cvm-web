@@ -1,1 +1,42 @@
-<div><router-outlet></router-outlet></div>
+<div>
+  <router-outlet>
+    <mat-toolbar color="primary">
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+        <span>Menu</span>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/dashboard">
+          <mat-icon>dashboard</mat-icon>
+          <span>Dashborad</span>
+        </button>
+        <button mat-menu-item routerLink="/noticia">
+          <mat-icon>forum</mat-icon>
+          <span>Noticia</span>
+        </button>
+        <button mat-menu-item routerLink="/transparencia">
+          <mat-icon>contactless</mat-icon>
+          <span>Transparencia</span>
+        </button>
+        <button mat-menu-item routerLink="/agenda">
+          <mat-icon>calendar_today</mat-icon>
+          <span>Agenda</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>exit_to_app</mat-icon>
+          <a href="www.google.com.br"><span>Sair </span></a>
+        </button>
+      </mat-menu>
+    </mat-toolbar>
+
+    <footer class="footer" style="color: blue">
+      <div class="container">
+        <div class="content has-text-centered">
+          <p>
+            developed by <a href="">Murilo</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </router-outlet>
+</div>
