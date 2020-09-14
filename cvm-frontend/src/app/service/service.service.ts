@@ -3,7 +3,7 @@ import {HttpClient, HttpHeaders, HttpResponse} from '@angular/common/http';
 import {Observable, of} from 'rxjs';
 import {Agenda} from '../data/agenda';
 
-const host = 'http://localhost:8080/cvm/';
+const host = 'http://localhost:8080/cvm/rest';
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -24,12 +24,13 @@ export class ServiceService {
 
   // AGENDA
   getAgenda(): Observable<HttpResponse<any>> {
-    return this.http.get<any>(host + '/agenda', {observe: 'response'});
+    // return this.http.get<any>(host + '/agenda', {observe: 'response'});
+    return this.http.get<any>(host + '/agenda', httpOptions);
   }
 
   setAgenda(agenda: Agenda){
     // return this.http.post(host+'/agenda', agenda);
-    return this.http.post<Agenda>(host, agenda, httpOptions);
+    return this.http.post<Agenda>(host + "/agenda", agenda, httpOptions);
   }
 
   // TRANSPARENCIA
