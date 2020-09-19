@@ -4,13 +4,15 @@ import {DashboardComponent} from '../component/dashboard/dashboard.component';
 import {AgendaComponent} from '../component/agenda/agenda.component';
 import {TransparenciaComponent} from '../component/transparencia/transparencia.component';
 import {NoticiaComponent} from '../component/noticia/noticia.component';
+import {IndexComponent} from '../component/index/index.component';
 
 const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent},
   {path: 'agenda', component: AgendaComponent},
   {path: 'transparencia', component: TransparenciaComponent},
   {path: 'noticia', component: NoticiaComponent},
-  {path: '', pathMatch: 'full', redirectTo: 'dashboard'}
+  {path: 'index', component: IndexComponent},
+  {path: '', pathMatch: 'full', redirectTo: 'index'}
 ];
 
 @NgModule({

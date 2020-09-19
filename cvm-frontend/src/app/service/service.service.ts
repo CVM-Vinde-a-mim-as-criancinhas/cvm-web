@@ -1,7 +1,9 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders, HttpResponse} from '@angular/common/http';
-import {Observable, of} from 'rxjs';
+import {Observable} from 'rxjs';
 import {Agenda} from '../data/agenda';
+import {Noticia} from '../data/noticia';
+import {Transparencia} from '../data/transparencia';
 
 const host = 'http://localhost:8080/cvm/rest';
 
@@ -24,13 +26,11 @@ export class ServiceService {
 
   // AGENDA
   getAgenda(): Observable<HttpResponse<any>> {
-    // return this.http.get<any>(host + '/agenda', {observe: 'response'});
     return this.http.get<any>(host + '/agenda', httpOptions);
   }
 
-  setAgenda(agenda: Agenda){
-    // return this.http.post(host+'/agenda', agenda);
-    return this.http.post<Agenda>(host + "/agenda", agenda, httpOptions);
+  setAgenda(agenda: Agenda) {
+    return this.http.post<Agenda>(host + '/agenda', agenda, httpOptions);
   }
 
   // TRANSPARENCIA
@@ -38,8 +38,16 @@ export class ServiceService {
     return this.http.get<any>(host + '/transparencia', {observe: 'response'});
   }
 
+  setTransparencia(transparencia: Transparencia) {
+    return this.http.post<Transparencia>(host + '/transparencia', transparencia, httpOptions);
+  }
+
   // NOTICIA
   getNoticia(): Observable<HttpResponse<any>> {
     return this.http.get<any>(host + '/noticia', {observe: 'response'});
+  }
+
+  setNoticia(noticia: Noticia) {
+    return this.http.post<Noticia>(host + '/noticia', noticia, httpOptions);
   }
 }

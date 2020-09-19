@@ -11,14 +11,14 @@ export class DashboardComponent implements OnInit {
   constructor(private service: ServiceService) {
   }
 
-  getAgenda() {
-    this.service.getAgenda().subscribe(result => {
-      console.log(result);
-    });
-  }
+  // getAgenda() {
+  //   this.service.getAgenda().subscribe(result => {
+  //     console.log(result);
+  //   });
+  // }
 
   ngOnInit(): void {
-    this.getAgenda();
+    // this.getAgenda();
   }
 
 }
