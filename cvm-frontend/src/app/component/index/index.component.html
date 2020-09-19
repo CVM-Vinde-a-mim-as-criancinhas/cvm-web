@@ -37,18 +37,115 @@
 </div>
 
 <br/>
-<mat-toolbar color="primary">
-  <button mat-menu-item routerLink="/noticia">
-    <mat-icon>forum</mat-icon>
-    <span>Noticia</span>
-  </button>
-  <button mat-menu-item routerLink="/transparencia">
-    <mat-icon>contactless</mat-icon>
-    <span>Transparencia</span>
-  </button>
-  <button mat-menu-item routerLink="/agenda">
-    <mat-icon>calendar_today</mat-icon>
-    <span>Agenda</span>
-  </button>
-</mat-toolbar>
+<div class="container">
+  <div class="row">
+    <button type="button" class="btn btn-primary btn-lg col-4" data-toggle="modal" data-target="#Apoiadores">
+      <mat-icon>group</mat-icon>
+      Apoiadores
+    </button>
 
+    <div class="modal fade" id="Apoiadores" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Apoiadores</h4>
+          </div>
+          <div class="modal-body">
+            <img
+              src="assets/img/apoiadores.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-primary btn-lg col-4" data-toggle="modal" data-target="#Fotos">
+      <mat-icon>photo_camera</mat-icon>
+      Fotos
+    </button>
+
+    <div class="modal fade" id="Fotos" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Fotos</h4>
+          </div>
+          <div class="modal-body">
+            <div class="card-group">
+              <div class="card col-4" style="width: 18rem;">
+                <img src="assets/img/cvm1.jpg" class="card-img-top">
+              </div>
+
+              <div class="card col-4" style="width: 18rem;">
+                <img src="assets/img/cvm2.jpg" class="card-img-top">
+              </div>
+
+              <div class="card col-4" style="width: 18rem;">
+                <img src="assets/img/cvm3.jpg" class="card-img-top">
+              </div>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="card-group">
+              <div class="card col-4" style="width: 18rem;">
+                <img src="assets/img/cvm4.jpg" class="card-img-top">
+              </div>
+
+              <div class="card col-4" style="width: 18rem;">
+                <img src="assets/img/cvm5.jpg" class="card-img-top">
+              </div>
+
+              <div class="card col-4" style="width: 18rem;">
+                <img src="assets/img/cvm6.jpg" class="card-img-top">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-primary btn-lg col-4" data-toggle="modal" data-target="#Videos">
+      <mat-icon>videocam</mat-icon>
+      Videos
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="Videos" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Videos</h4>
+          </div>
+          <div class="modal-body">
+            <h1><a href="https://www.youtube.com/channel/UCQKmLkk3Cytc9TOiMvG2G4w">Acesse nosso canal no youtube</a></h1>
+            <div class="card-group">
+              <div class="card col-4" style="width: 18rem;">
+                <iframe width="200" height="120" src="https://www.youtube.com/embed/ujA17_A_sFM" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+
+              <div class="card col-4" style="width: 18rem;">
+                <iframe width="200" height="120" src="https://www.youtube.com/embed/mfhsXXXNdWA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+
+              <div class="card col-4" style="width: 18rem;">
+                <iframe width="200" height="120" src="https://www.youtube.com/embed/pN8jifr0Z80" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
