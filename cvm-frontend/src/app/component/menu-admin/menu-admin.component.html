@@ -1,5 +1,5 @@
 <mat-toolbar color="primary">
-  <button mat-icon-button [matMenuTriggerFor]="menu">
+  <button mat-icon-button [matMenuTriggerFor]="menu" class="col-1">
     <mat-icon>menu</mat-icon>
     <span>Menu</span>
   </button>
@@ -20,9 +20,14 @@
       <mat-icon>calendar_today</mat-icon>
       <span>Agenda</span>
     </button>
-    <button mat-menu-item>
+    <button mat-menu-item routerLink="/index">
       <mat-icon>exit_to_app</mat-icon>
-      <a href=""><span>Sair </span></a>
+      <span>Sair </span>
     </button>
   </mat-menu>
+  <div class="col-9"></div>
+  <button class="col-2" style="color: white; text-align: right" mat-menu-item routerLink="/dashboard">
+    <mat-icon style="color: white">admin_panel_settings</mat-icon>
+    <span>Painel de Controle</span>
+  </button>
 </mat-toolbar>

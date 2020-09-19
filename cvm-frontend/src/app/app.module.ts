@@ -21,6 +21,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { MenuAdminComponent } from './component/menu-admin/menu-admin.component';
 import { IndexComponent } from './component/index/index.component';
+import { FooterbarComponent } from './component/footerbar/footerbar.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { IndexComponent } from './component/index/index.component';
     TransparenciaComponent,
     NoticiaComponent,
     MenuAdminComponent,
-    IndexComponent
+    IndexComponent,
+    FooterbarComponent
   ],
   imports: [
     BrowserModule,
