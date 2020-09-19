@@ -1,20 +1,17 @@
 <div class="container" style="margin-top: 10px">
-  <form>
+  <form #formularioNoticia="ngForm" (submit)="addNoticia(noticia)">
     <div class="form-group">
       <label for="titulo">Titulo Noticia</label>
-      <input type="text" class="form-control" id="titulo">
+      <input type="text" class="form-control" id="titulo" [(ngModel)]="noticia.tituloNoticia" required>
     </div>
     <div class="form-group">
       <label for="data">Data Noticia</label>
-      <input type="date" class="form-control" id="data">
+      <input type="date" class="form-control" id="data" [(ngModel)]="noticia.dataData" required>
     </div>
     <div class="form-group">
       <label for="descricao">Descricao Noticia</label>
-      <input type="text" class="form-control" id="descricao">
+      <input type="text" class="form-control" id="descricao" [(ngModel)]="noticia.descricaoNoticia" required>
     </div>
-    <button type="submit" class="btn btn-primary">Cadastrar</button>
+    <button  type="submit" [disabled]="formularioNoticia.invalid" type="submit" class="btn btn-primary">Cadastrar</button>
   </form>
 </div>
-
-<!--<pre>{{noticiaForm.value | json}}</pre>-->
-

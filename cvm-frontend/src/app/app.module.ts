@@ -17,6 +17,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { MenuAdminComponent } from './component/menu-admin/menu-admin.component';
+import { IndexComponent } from './component/index/index.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     DashboardComponent,
     AgendaComponent,
     TransparenciaComponent,
-    NoticiaComponent
+    NoticiaComponent,
+    MenuAdminComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +45,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatSelectModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatGridListModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
