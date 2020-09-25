@@ -4,16 +4,16 @@ package backend.data;
 import javax.persistence.*;
 
 @Entity
-@Table(name="tab_agenda")
+@Table(name = "tab_agenda")
 public class Agenda {
 
     @Id
-    @GeneratedValue
-    @Column(name="id_agenda")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_agenda")
     private int id;
-    @Column(name="ds_evento")
+    @Column(name = "ds_evento")
     private String descricaoEvento;
-    @Column(name="dt_evento")
+    @Column(name = "dt_evento")
     private String dataEvento;
 
     @Override
