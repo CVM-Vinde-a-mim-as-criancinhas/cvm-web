@@ -1,9 +1,19 @@
 package backend.data;
 
+
+import javax.persistence.*;
+
+@Entity
+@Table(name="tab_agenda")
 public class Agenda {
 
+    @Id
+    @GeneratedValue
+    @Column(name="id_agenda")
     private int id;
+    @Column(name="ds_evento")
     private String descricaoEvento;
+    @Column(name="dt_evento")
     private String dataEvento;
 
     @Override
