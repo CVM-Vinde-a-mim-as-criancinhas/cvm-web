@@ -2,7 +2,6 @@ package backend.repository.base;
 
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.inject.Default;
-import javax.enterprise.inject.Disposes;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
@@ -19,7 +18,7 @@ public class BaseConnection {
         Connection conn = null;
         try {
             Context initialContext = new InitialContext();
-            DataSource dataSource = (DataSource) initialContext.lookup("java:jboss/datasources/cvmDS\\");
+            DataSource dataSource = (DataSource) initialContext.lookup("java:jboss/datasources/cvmDS");
             conn = dataSource.getConnection();
         } catch (Exception e) {
             throw new SQLException("Erro conexao", e);
