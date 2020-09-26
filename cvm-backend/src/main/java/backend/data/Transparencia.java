@@ -1,11 +1,19 @@
 package backend.data;
 
+import javax.persistence.*;
 import java.io.File;
 
+@Entity
+@Table(name = "tab_transparencia")
 public class Transparencia {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_transparencia")
     private int id;
+    @Column(name = "id_noticia")
     private String tituloTransparencia;
+    @Column(name = "arquivo_transparencia")
     private File arquivoTransparencia;
 
     @Override

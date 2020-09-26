@@ -1,10 +1,20 @@
 package backend.data;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "tab_noticia")
 public class Noticia {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_noticia")
     private int id;
+    @Column(name = "ds_titulo_noticia")
     private String tituloNoticia;
+    @Column(name = "ds_noticia")
     private String descricaoNoticia;
+    @Column(name = "dt_noticia")
     private String dataData;
 
     @Override
