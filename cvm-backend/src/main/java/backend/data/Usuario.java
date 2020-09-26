@@ -1,9 +1,17 @@
 package backend.data;
 
-public class Usuario {
+import javax.persistence.*;
 
+@Entity
+@Table(name = "tab_usuario")
+public class Usuario {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_usuario")
     private int id;
+    @Column(name = "nm_nome")
     private String nome;
+    @Column(name = "nm_senha")
     private String senha;
 
     @Override

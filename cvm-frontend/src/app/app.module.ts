@@ -25,6 +25,8 @@ import { ACvmComponent } from './component/a-cvm/a-cvm.component';
 import { EducacaoInfantilComponent } from './component/educacao-infantil/educacao-infantil.component';
 import { AcolhimentoInstitucionalComponent } from './component/acolhimento-institucional/acolhimento-institucional.component';
 import { CasCentroAtendimentoSocialComponent } from './component/cas-centro-atendimento-social/cas-centro-atendimento-social.component';
+import { FooterbarComponent } from './component/footerbar/footerbar.component';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { CasCentroAtendimentoSocialComponent } from './component/cas-centro-aten
     ACvmComponent,
     EducacaoInfantilComponent,
     AcolhimentoInstitucionalComponent,
-    CasCentroAtendimentoSocialComponent
+    CasCentroAtendimentoSocialComponent,
+    FooterbarComponent
   ],
   imports: [
     BrowserModule,
