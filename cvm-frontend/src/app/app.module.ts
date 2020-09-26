@@ -21,6 +21,10 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { MenuAdminComponent } from './component/menu-admin/menu-admin.component';
 import { IndexComponent } from './component/index/index.component';
+import { ACvmComponent } from './component/a-cvm/a-cvm.component';
+import { EducacaoInfantilComponent } from './component/educacao-infantil/educacao-infantil.component';
+import { AcolhimentoInstitucionalComponent } from './component/acolhimento-institucional/acolhimento-institucional.component';
+import { CasCentroAtendimentoSocialComponent } from './component/cas-centro-atendimento-social/cas-centro-atendimento-social.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,11 @@ import { IndexComponent } from './component/index/index.component';
     TransparenciaComponent,
     NoticiaComponent,
     MenuAdminComponent,
-    IndexComponent
+    IndexComponent,
+    ACvmComponent,
+    EducacaoInfantilComponent,
+    AcolhimentoInstitucionalComponent,
+    CasCentroAtendimentoSocialComponent
   ],
   imports: [
     BrowserModule,
