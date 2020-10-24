@@ -19,6 +19,7 @@ import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { MenuUserComponent } from './component/menu-user/menu-user.component';
 import { MenuAdminComponent } from './component/menu-admin/menu-admin.component';
 import { IndexComponent } from './component/index/index.component';
 import { ACvmComponent } from './component/a-cvm/a-cvm.component';
@@ -36,6 +37,7 @@ import { FooterbarComponent } from './component/footerbar/footerbar.component';
     TransparenciaComponent,
     NoticiaComponent,
     MenuAdminComponent,
+    MenuUserComponent,
     IndexComponent,
     ACvmComponent,
     EducacaoInfantilComponent,

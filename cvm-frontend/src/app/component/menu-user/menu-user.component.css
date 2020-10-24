@@ -1,0 +1,13 @@
+mat-toolbar {
+  display: flex;
+}
+
+.mat-button {
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+}
+
+.mat-button:hover {
+  color: rgba(255, 255, 255, 0.863);
+}
