@@ -1,7 +1,2 @@
-<div>
-  <router-outlet>
-    <app-menu-admin></app-menu-admin>
-    <app-menu-user></app-menu-user>
-  </router-outlet>
-</div>
-<app-footerbar></app-footerbar>
+<app-menu *ngIf="router.url != '/login'"></app-menu>
+<app-login *ngIf="router.url === '/login'"></app-login>

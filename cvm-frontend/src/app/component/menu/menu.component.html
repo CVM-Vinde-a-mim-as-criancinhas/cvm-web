@@ -1,0 +1,46 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    </button>
+    <img src="">
+    <h1>CVM</h1>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+
+      <a mat-list-item routerLink="/dashboard">
+        <mat-icon>dashboard</mat-icon>
+        <span>Dashborad</span> </a>
+      <a mat-list-item routerLink="/acvm">
+        <span>A CVM</span> </a>
+      <a mat-list-item routerLink="/educacaoinfantil">
+        <span>Educação Infantil</span> </a>
+      <a mat-list-item routerLink="/acolhimentoinstitucional">
+        <span>Acolhimento Institucional</span> </a>
+      <a mat-list-item routerLink="/dashboard">
+        <span>Inclusão Produtiva</span> </a>
+      <a mat-list-item routerLink="/dashboard">
+        <span>Comunidade Terapêutica</span> </a>
+      <a mat-list-item routerLink="/dashboard">
+        <span>Ajude</span> </a>
+      <a mat-list-item routerLink="/login" *ngIf="logado === true" (click)="logout()">
+        <mat-icon></mat-icon>
+        <span>Administrador</span></a>
+      <a mat-list-item routerLink="/login" *ngIf="logado === false" (click)="logout()">
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Sair </span></a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+      <router-outlet></router-outlet>
+      <app-footerbar></app-footerbar>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

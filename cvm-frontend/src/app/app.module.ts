@@ -19,14 +19,20 @@ import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import { MenuUserComponent } from './component/menu-user/menu-user.component';
-import { MenuAdminComponent } from './component/menu-admin/menu-admin.component';
-import { IndexComponent } from './component/index/index.component';
-import { ACvmComponent } from './component/a-cvm/a-cvm.component';
-import { EducacaoInfantilComponent } from './component/educacao-infantil/educacao-infantil.component';
-import { AcolhimentoInstitucionalComponent } from './component/acolhimento-institucional/acolhimento-institucional.component';
-import { CasCentroAtendimentoSocialComponent } from './component/cas-centro-atendimento-social/cas-centro-atendimento-social.component';
-import { FooterbarComponent } from './component/footerbar/footerbar.component';
+import {IndexComponent} from './component/index/index.component';
+import {ACvmComponent} from './component/a-cvm/a-cvm.component';
+import {EducacaoInfantilComponent} from './component/educacao-infantil/educacao-infantil.component';
+import {AcolhimentoInstitucionalComponent} from './component/acolhimento-institucional/acolhimento-institucional.component';
+import {CasCentroAtendimentoSocialComponent} from './component/cas-centro-atendimento-social/cas-centro-atendimento-social.component';
+import {FooterbarComponent} from './component/footerbar/footerbar.component';
+import {LoginComponent} from "./component/login/login.component";
+import {ServiceService} from "./service/service.service";
+import {Logged} from "./component/auth/logged";
+import {PermissoesService} from "./component/seguranca/autorizacao-service";
+import {AuthGuardService} from "./component/seguranca/auth-guard-service";
+import {MAT_DATE_LOCALE} from "@angular/material/core";
+import {MenuComponent} from "./component/menu/menu.component";
+import {MatListModule} from "@angular/material/list";
 
 
 @NgModule({
@@ -36,10 +42,10 @@ import { FooterbarComponent } from './component/footerbar/footerbar.component';
     AgendaComponent,
     TransparenciaComponent,
     NoticiaComponent,
-    MenuAdminComponent,
-    MenuUserComponent,
     IndexComponent,
+    MenuComponent,
     ACvmComponent,
+    LoginComponent,
     EducacaoInfantilComponent,
     AcolhimentoInstitucionalComponent,
     CasCentroAtendimentoSocialComponent,
@@ -60,9 +66,16 @@ import { FooterbarComponent } from './component/footerbar/footerbar.component';
     FormsModule,
     ReactiveFormsModule,
     MatGridListModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatListModule
   ],
-  providers: [],
+  providers: [
+    ServiceService,
+    Logged,
+    PermissoesService,
+    AuthGuardService,
+    {provide: MAT_DATE_LOCALE, useValue: 'pt-BR'},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
