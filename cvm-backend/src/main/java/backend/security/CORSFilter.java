@@ -1,5 +1,7 @@
 package backend.security;
 
+import backend.security.utils.HttpResponseUtils;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
@@ -14,11 +16,7 @@ public class CORSFilter implements Filter {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
 
-        response.addHeader("Access-Control-Allow-Origin", "*");
-        response.addHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
-        response.addHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, x-authorization, Charset");
-        response.addHeader("Access-Control-Allow-Credentials", "true");
-        response.addHeader("Access-Control-Expose-Headers", "X-Pagination-Total-Entries, X-Order-Field, X-Order-Type, x-authorization, x-message, x-folha-fechada");
+        HttpResponseUtils.addCorsHeaders(response);
 
         //retorna Ok se for OPTIONS
         if (request.getMethod().equalsIgnoreCase("OPTIONS")) {

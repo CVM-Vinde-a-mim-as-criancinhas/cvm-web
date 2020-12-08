@@ -9,18 +9,23 @@ import { ACvmComponent } from '../component/a-cvm/a-cvm.component';
 import { EducacaoInfantilComponent } from '../component/educacao-infantil/educacao-infantil.component';
 import { AcolhimentoInstitucionalComponent } from '../component/acolhimento-institucional/acolhimento-institucional.component';
 import { CasCentroAtendimentoSocialComponent } from '../component/cas-centro-atendimento-social/cas-centro-atendimento-social.component';
+import {LoginComponent} from "../component/login/login.component";
+import {Logged} from "../component/auth/logged";
+import {AuthGuardService} from "../component/seguranca/auth-guard-service";
 
 const routes: Routes = [
-  {path: 'dashboard', component: DashboardComponent},
-  {path: 'agenda', component: AgendaComponent},
-  {path: 'transparencia', component: TransparenciaComponent},
-  {path: 'noticia', component: NoticiaComponent},
+  {path: 'dashboard', component: DashboardComponent, canActivate: [Logged, AuthGuardService]},
+  {path: 'agenda', component: AgendaComponent, canActivate: [Logged, AuthGuardService]},
+  {path: 'transparencia', component: TransparenciaComponent, canActivate: [Logged, AuthGuardService]},
+  {path: 'noticia', component: NoticiaComponent, canActivate: [Logged, AuthGuardService]},
   {path: 'index', component: IndexComponent},
   {path: 'acvm', component: ACvmComponent},
   {path: 'educacaoinfantil', component: EducacaoInfantilComponent},
   {path: 'acolhimentoinstitucional', component: AcolhimentoInstitucionalComponent},
   {path: 'cascentroatendimentosocial', component: CasCentroAtendimentoSocialComponent},
-  {path: '', pathMatch: 'full', redirectTo: 'index'}
+  {path: '', pathMatch: 'full', redirectTo: 'index'},
+
+  {path: 'login', component: LoginComponent},
 ];
 
 @NgModule({
