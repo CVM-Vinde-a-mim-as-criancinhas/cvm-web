@@ -3,37 +3,37 @@
     <button mat-icon-button>
       <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
     </button>
-    <img src="">
-    <h1>CVM</h1>
+    <div class="col-2">
+      <img routerLink="/index" src="assets/img/logo2.png" width="300px" height="60px">
+    </div>
   </mat-toolbar-row>
 </mat-toolbar>
 
 <mat-sidenav-container>
   <mat-sidenav #sidenav>
     <mat-nav-list>
-
-      <a mat-list-item routerLink="/dashboard">
-        <mat-icon>dashboard</mat-icon>
-        <span>Dashborad</span> </a>
-      <a mat-list-item routerLink="/acvm">
-        <span>A CVM</span> </a>
-      <a mat-list-item routerLink="/educacaoinfantil">
-        <span>Educação Infantil</span> </a>
-      <a mat-list-item routerLink="/acolhimentoinstitucional">
-        <span>Acolhimento Institucional</span> </a>
-      <a mat-list-item routerLink="/inclusaoprodutiva">
-        <span>Inclusão Produtiva</span> </a>
-      <a mat-list-item routerLink="/comunidadeterapeutica">
-        <span>Comunidade Terapêutica</span> </a>
-      <a mat-list-item routerLink="/ajude">
-        <span>Ajude</span> </a>
-      <a mat-list-item routerLink="/login" *ngIf="logado === true" (click)="logout()">
-        <mat-icon></mat-icon>
-        <span>Administrador</span></a>
-      <a mat-list-item routerLink="/login" *ngIf="logado === false" (click)="logout()">
-        <mat-icon>exit_to_app</mat-icon>
-        <span>Sair </span></a>
-
+      <a mat-list-item><span routerLink="/acvm">A CVM</span></a>
+      <a mat-list-item><span routerLink="/educacaoinfantil">Educação Infantil</span></a>
+      <a mat-list-item> <span routerLink="/acolhimentoinstitucional">Acolhimento Institucional</span></a>
+      <a mat-list-item><span routerLink="/inclusaoprodutiva">Inclusão Produtiva</span></a>
+      <a mat-list-item><span routerLink="/comunidadeterapeutica">Comunidade Terapêutica</span></a>
+      <a mat-list-item><span routerLink="/ajude">Ajude</span></a>
+      <br/>
+      <hr>
+      <a mat-list-item routerLink="/dashboard" *ngIf="logado === true">
+        <span>Dashboard</span></a>
+      <a mat-list-item routerLink="/agenda" *ngIf="logado === true">
+        <span>Agenda</span></a>
+      <a mat-list-item routerLink="/transparencia" *ngIf="logado === true">
+        <span>Transparencia</span></a>
+      <a mat-list-item routerLink="/noticia" *ngIf="logado === true">
+        <span>Noticia</span></a>
+      <a mat-list-item routerLink="/login" *ngIf="logado === false">
+        <span>Administrador</span>
+      </a>
+      <a mat-list-item routerLink="/index" *ngIf="logado === true" (click)="logout()">
+        <span>Sair</span>
+      </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

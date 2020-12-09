@@ -11,7 +11,6 @@ export class LoginComponent implements OnInit {
 
   login: string = '';
   password: string = '';
-  nivelPermissao: string = '';
   error = '';
   loginOk = true;
   mensagemErro = '';
@@ -25,9 +24,10 @@ export class LoginComponent implements OnInit {
   onSubmit(formulario) {
     if (formulario.valid) {
       var usuario: any = {};
-      usuario.matricula = this.login;
+      usuario.registro = this.login;
       usuario.senha = this.password;
-      usuario.nivelPermissao = this.nivelPermissao;
+
+      console.log(usuario)
 
       this.authentication.login(usuario).subscribe(result => {
           // salvar dados no localstorage
@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
           console.log(this.error);
 
           if (error.status === 401) {
-            this.mensagemErro = 'Matricula / Senha Inválidos!';
+            this.mensagemErro = 'Registro / Senha Inválidos!';
           } else {
             this.mensagemErro = 'Ocorreu um erro.';
           }
@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit {
         });
 
     } else {
-      this.mensagemErro = 'Matricula / Senha Inválidos!';
+      this.mensagemErro = 'Registro / Senha Inválidos!';
       this.loginOk = false;
     }
   }
