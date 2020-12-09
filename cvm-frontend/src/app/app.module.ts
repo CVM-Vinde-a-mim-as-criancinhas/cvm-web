@@ -33,6 +33,9 @@ import {AuthGuardService} from "./component/seguranca/auth-guard-service";
 import {MAT_DATE_LOCALE} from "@angular/material/core";
 import {MenuComponent} from "./component/menu/menu.component";
 import {MatListModule} from "@angular/material/list";
+import { InclusaoProdutivaComponent } from './component/inclusao-produtiva/inclusao-produtiva.component';
+import { ComunidadeTerapeuticoComponent } from './component/comunidade-terapeutico/comunidade-terapeutico.component';
+import { AjudeComponent } from './component/ajude/ajude.component';
 
 
 @NgModule({
@@ -49,7 +52,10 @@ import {MatListModule} from "@angular/material/list";
     EducacaoInfantilComponent,
     AcolhimentoInstitucionalComponent,
     CasCentroAtendimentoSocialComponent,
-    FooterbarComponent
+    FooterbarComponent,
+    InclusaoProdutivaComponent,
+    ComunidadeTerapeuticoComponent,
+    AjudeComponent
   ],
   imports: [
     BrowserModule,
