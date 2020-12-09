@@ -1,12 +1,11 @@
 package backend.security.servlet;
 
-import backend.data.UserPrincipal;
-import backend.data.UsuarioDTO;
-import backend.repository.LoginRepository;
-import backend.security.dto.TokenValueDTO;
-import backend.security.utils.HttpTokenUtils;
-import backend.util.Constants;
-import backend.util.HttpRequestUtils;
+import backend.data.*;
+import backend.repository.*;
+import backend.util.*;
+import backend.security.servlet.*;
+import backend.security.utils.*;
+import backend.security.dto.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import javax.inject.Inject;
@@ -38,9 +37,8 @@ public class GenerateTokenServlet extends HttpServlet {
         UserPrincipal userPrincipal = null;
         String matricula;
         String password;
-        String nivelPermissao;
 
-        String msgError = "Matricula/senha inválido.";
+        String msgError = "Registro/senha inválido.";
         String msgErrorEstrutura = "Estrutura fora do padrão esperado.";
 
         String json = new HttpRequestUtils().getJsonFromRequest(request);
@@ -59,22 +57,19 @@ public class GenerateTokenServlet extends HttpServlet {
         if (jsonObject != null) {
             try {
                 try {
-                    matricula = jsonObject.getString("matricula");
+                    matricula = jsonObject.getString("registro");
                     password = jsonObject.getString("senha");
-                    nivelPermissao = jsonObject.getString("nivelPermissao");
                 } catch (Exception silent) {
                     throw new LoginException(msgErrorEstrutura);
                 }
 
                 // faz a validação do usuário no banco
-                UsuarioDTO u = loginRepository.executaLogin(matricula, password, nivelPermissao);
+                UsuarioDTO u = loginRepository.executaLogin(matricula, password);
 
                 if (u != null) {
                     userPrincipal = new UserPrincipal();
-                    userPrincipal.setCodigoTurma(u.getTurma());
                     userPrincipal.setId(u.getId());
-                    userPrincipal.setMatricula(u.getMatricula());
-                    userPrincipal.setNivelPermisao(nivelPermissao);
+                    userPrincipal.setNome(u.getNome());
                     userPrincipal.setSenha(u.getSenha());
                 }
 
@@ -122,3 +117,4 @@ public class GenerateTokenServlet extends HttpServlet {
         mapper.writeValue(response.getOutputStream(), data);
     }
 }
+

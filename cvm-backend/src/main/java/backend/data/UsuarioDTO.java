@@ -5,9 +5,6 @@ public class UsuarioDTO {
     private Integer id;
     private String nome;
     private String senha;
-    private String matricula;
-    private String turma;
-    private String materia;
 
     @Override
     public String toString() {
@@ -15,9 +12,6 @@ public class UsuarioDTO {
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 ", senha='" + senha + '\'' +
-                ", matricula='" + matricula + '\'' +
-                ", turma='" + turma + '\'' +
-                ", materia='" + materia + '\'' +
                 '}';
     }
 
@@ -43,29 +37,5 @@ public class UsuarioDTO {
 
     public void setSenha(String senha) {
         this.senha = senha;
-    }
-
-    public String getMatricula() {
-        return matricula;
-    }
-
-    public void setMatricula(String matricula) {
-        this.matricula = matricula;
-    }
-
-    public String getTurma() {
-        return turma;
-    }
-
-    public void setTurma(String turma) {
-        this.turma = turma;
-    }
-
-    public String getMateria() {
-        return materia;
-    }
-
-    public void setMateria(String materia) {
-        this.materia = materia;
     }
 }

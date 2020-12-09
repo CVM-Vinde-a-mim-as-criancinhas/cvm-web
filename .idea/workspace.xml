@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="452d300d-f94f-4122-a53b-d6d87477218e" name="Default Changelist" comment="" />
+    <list default="true" id="452d300d-f94f-4122-a53b-d6d87477218e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/cvm-frontend/src/app/component/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/cvm-frontend/src/app/component/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvm-frontend/src/app/component/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cvm-frontend/src/app/component/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvm-frontend/src/app/data/usuario-principal.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cvm-frontend/src/app/data/usuario-principal.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,8 +22,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/cvm-frontend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/cvm-backend" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -31,6 +36,7 @@
       <option name="presentableId" value="Default" />
       <updated>1607383000938</updated>
       <workItem from="1607383002862" duration="88000" />
+      <workItem from="1607468819898" duration="30000" />
     </task>
     <servers />
   </component>
@@ -38,9 +44,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1607383089817">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="740" y="277" key="FileChooserDialogImpl" timestamp="1607468847885">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="740" y="277" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607468847885" />
     <state x="740" y="280" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1607383089817" />
   </component>
 </project>
