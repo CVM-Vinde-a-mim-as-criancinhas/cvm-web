@@ -14,6 +14,7 @@ import {Logged} from "../component/auth/logged";
 import {AuthGuardService} from "../component/seguranca/auth-guard-service";
 import {InclusaoProdutivaComponent} from '../component/inclusao-produtiva/inclusao-produtiva.component';
 import {ComunidadeTerapeuticoComponent} from '../component/comunidade-terapeutico/comunidade-terapeutico.component';
+import {AjudeComponent} from '../component/ajude/ajude.component';
 
 const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent, canActivate: [Logged, AuthGuardService]},
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path: 'acolhimentoinstitucional', component: AcolhimentoInstitucionalComponent},
   {path: 'inclusaoprodutiva', component: InclusaoProdutivaComponent},
   {path: 'comunidadeterapeutica', component: ComunidadeTerapeuticoComponent},
+  {path: 'ajude', component: AjudeComponent},
   {path: 'cascentroatendimentosocial', component: CasCentroAtendimentoSocialComponent},
   {path: '', pathMatch: 'full', redirectTo: 'index'},
 
